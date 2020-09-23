@@ -217,6 +217,10 @@
             cursor: pointer;
             opacity: .55;
         }
+
+        .code-expand-icon-show, .code-expand-icon-hide {
+            filter: invert(var(--filter-invert));
+        }
     }
 
 </style>

@@ -3,7 +3,7 @@ export const lightTheme = {
     '--color': '#333',
     '--color-markdown-h1': '#0d1a26',
     '--color-markdown-h': '#0d1a26',
-    '--color-icon-copy': '#697b8c',
+    '--color-icon-copy': '#6b6969',
     '--color-th': '#5c6b77',
     '--bg-layout': '#f0f2f5',
     '--bg-demo-description-h4': '#fff',
@@ -20,14 +20,16 @@ export const lightTheme = {
     '--hljs-built-in': '#dc322f',
     '--hljs-bullet': '#cb4b16',
     '--hljs-keyword': '#859900',
-    '--hljs-tag':'#666'
+    '--hljs-tag':'#666',
+    // icon
+    '--filter-invert': 0
 }
 export const darkTheme = {
-    '--color': 'rgba(255,255,255,.8)',
     '--bg': '#111',
+    '--color': 'rgba(255,255,255,.7)',
     '--color-markdown-h1': '#fff',
     '--color-markdown-h': 'rgba(255,255,255,.6)',
-    '--color-icon-copy': '#e2e2e2',
+    '--color-icon-copy': '#838383',
     '--color-th': '#a4a4a4',
     '--bg-layout': '#171717',
     '--bg-demo-description-h4': '#333',
@@ -44,5 +46,7 @@ export const darkTheme = {
     '--hljs-built-in': '#c678dd',
     '--hljs-bullet': '#cb4b16',
     '--hljs-keyword': '#c678dd',
-    '--hljs-tag':'#abb2bf'
+    '--hljs-tag':'#abb2bf',
+    // icon
+    '--filter-invert': 1
 }

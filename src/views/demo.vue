@@ -2,7 +2,7 @@
     <a-layout class="basic-layout">
         <a-layout-sider :width="240">
             <div class="logo" @click="handleClick">SGUOYI</div>
-            <a-menu :theme="theme" mode="inline" :default-selected-keys="['moveNumber']">
+            <a-menu :theme="theme" mode="inline" :default-selected-keys="selectedKey">
                 <a-menu-item key="moveNumber">
                     <router-link to="/moveNumber">
                         <span class="nav-text">MoveNumber <span class="chinese">数字滚动</span></span>
@@ -58,11 +58,13 @@
         name: "Demo",
         data() {
             return {
-                theme: store.theme
+                theme: store.theme,
+                selectedKey: []
             }
         },
         created() {
             this.setTheme(this.theme)
+            this.selectedKey.push(this.$route.name)
         },
         methods: {
             setTheme(theme) {
@@ -106,6 +108,7 @@
             font-family: sguoyi2;
             background: var(--bg-logo);
             color: rgba(198, 47, 47, 0.9);
+            cursor: pointer;
         }
     }
 
