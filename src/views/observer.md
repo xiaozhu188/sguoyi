@@ -1,24 +1,49 @@
+<script>
+    export default {
+        data() {
+            return {
+                shortText: '我吃的是草，挤出来的是牛奶'
+            }
+        },
+        methods: {
+            onResize(data) {
+                console.log(data)
+            },
+            onEnter() {
+                console.log('onEnter')            
+            },
+            onLeave() {
+                console.log('onLeave')            
+            },
+            onChange() {
+                console.log('onChange')            
+            }
+        }
+    }
+</script>
+
 # Observer 观测
 
-单行文本超出边界滚动
+IntersectionObserver, MutationObserver and PerformanceObserver in Vue.js
 
 ## 何时使用
-- 代替text-overflow: ellipsis方案,过长文本超出边界滚动完整显示
+- IntersectionObserver, MutationObserver and PerformanceObserver in Vue.js
 
 ## 代码演示
 
 ::: demo
 <summary>
-  #### 基本
-  最简单的用法。
+  #### ResizeObserver
+  提供组件与指令调用
 </summary>
 
 ```html
 <template>
-    <div>
-        <div class="demo-observer">
-            <observer />
-        </div>
+    <div class="demo-observer">
+        <div v-resize="onResize">测试区</div>
+        <resize @resize="onResize">
+            <div>{{ shortText }}</div>
+        </resize>
     </div>
 </template>
 
@@ -28,17 +53,50 @@
             return {
                 shortText: '我吃的是草，挤出来的是牛奶'
             }
+        },
+        methods: {
+            onResize(data) {
+                console.log(data)
+            }
         }   
     };
 </script>
+```
+:::
 
-<style>
-.demo-marquee {
-    width: 200px;
-    margin-bottom: 15px;
-    line-height: 1.3;
-}
-</style>
+::: demo
+<summary>
+  #### IntersectionObserver
+  组件调用
+</summary>
+
+```html
+<template>
+    <intersection @enter="onEnter" @leave="onLeave" @change="onChange">
+        <div>{{ shortText }}</div>
+    </intersection>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                
+            }
+        },
+        methods: {
+            onEnter() {
+                console.log('onEnter')            
+            },
+            onLeave() {
+                console.log('onLeave')            
+            },
+            onChange() {
+                console.log('onChange')            
+            }
+        }   
+    };
+</script>
 ```
 :::
 

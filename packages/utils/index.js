@@ -36,3 +36,8 @@ export const time2Min = function (time) {
     let totalMin = 60 * hour + min
     return totalMin
 }
+
+// 是否原生方法
+export const isNative = function (constructor) {
+    return typeof constructor === 'function' && /native code/g.test(constructor.toString())
+}
