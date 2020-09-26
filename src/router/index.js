@@ -6,8 +6,8 @@ Vue.use(VueRouter)
 const routes = [
     {
         path: '/',
-        name: 'Home',
-        component: () => import(/* webpackChunkName: "home" */ '../views/demo'),
+        name: 'index',
+        component: () => import(/* webpackChunkName: "index" */ '../views/index'),
         redirect: '/moveNumber',
         children: [
             {
@@ -39,6 +39,11 @@ const routes = [
                 path: '/observer',
                 name: 'observer',
                 component: () => import(/* webpackChunkName: "observer" */ '../views/observer'),
+            },
+            {
+                path: '/sgyRequest',
+                name: 'sgyRequest',
+                component: () => import(/* webpackChunkName: "sgyRequest" */ '../views/sgyRequest'),
             }
         ]
     }

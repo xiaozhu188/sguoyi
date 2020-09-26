@@ -21,8 +21,9 @@ export const lightTheme = {
     '--hljs-bullet': '#cb4b16',
     '--hljs-keyword': '#859900',
     '--hljs-tag':'#666',
-    // icon
-    '--filter-invert': 0
+    // filter
+    '--filter-invert': 0,
+    '--filter-brightness': 1
 }
 export const darkTheme = {
     '--bg': '#111',
@@ -47,6 +48,7 @@ export const darkTheme = {
     '--hljs-bullet': '#cb4b16',
     '--hljs-keyword': '#c678dd',
     '--hljs-tag':'#abb2bf',
-    // icon
-    '--filter-invert': 1
+    // filter
+    '--filter-invert': 1,
+    '--filter-brightness': 0.4
 }

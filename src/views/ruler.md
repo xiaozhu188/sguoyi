@@ -48,6 +48,12 @@
         },
     };
 </script>
+
+<style>
+    .demo-ruler {
+        filter: brightness(var(--filter-brightness));
+    }
+</style>
 ```
 :::
 

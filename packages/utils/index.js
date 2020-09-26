@@ -37,7 +37,7 @@ export const time2Min = function (time) {
     return totalMin
 }
 
-// 是否原生方法
+// 是否浏览器原生方法
 export const isNative = function (constructor) {
     return typeof constructor === 'function' && /native code/g.test(constructor.toString())
 }
