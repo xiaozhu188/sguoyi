@@ -85,6 +85,7 @@ function _fetch (config) {
 }
 
 function transformResponse (config, response) {
+    // data,status,statusText,headers,config
     const { responseType } = config
     let result
     switch (responseType) {

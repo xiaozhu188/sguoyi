@@ -34,6 +34,11 @@
                             <span class="nav-text">Observer <span class="chinese">观测</span></span>
                         </router-link>
                     </a-menu-item>
+                  <a-menu-item key="toast">
+                    <router-link to="/toast">
+                      <span class="nav-text">Toast <span class="chinese">轻提示</span></span>
+                    </router-link>
+                  </a-menu-item>
                 </a-menu-item-group>
                 <a-menu-item-group key="utils" title="工具函数">
                     <a-menu-item key="sgyRequest">

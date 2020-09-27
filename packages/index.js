@@ -5,6 +5,7 @@ import ruler from "./ruler";
 import marquee from "./marquee";
 import observer from "./observer";
 import sguoyi from "./sgyRequest";
+import toast from "./toast";
 
 export {
     moveNumber,
@@ -13,10 +14,11 @@ export {
     ruler,
     marquee,
     observer,
-    sguoyi
+    sguoyi,
+    toast
 }
 export default {
-    install(Vue) {
+    install (Vue) {
         Vue.use(moveNumber);
         Vue.use(countdown);
         Vue.use(virtualList);
@@ -24,5 +26,6 @@ export default {
         Vue.use(marquee);
         Vue.use(observer);
         Vue.$sgy = Vue.prototype.$sgy = sguoyi;
+        Vue.use(toast);
     }
 };

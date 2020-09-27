@@ -44,6 +44,11 @@ const routes = [
                 path: '/sgyRequest',
                 name: 'sgyRequest',
                 component: () => import(/* webpackChunkName: "sgyRequest" */ '../views/sgyRequest'),
+            },
+            {
+                path: '/toast',
+                name: 'toast',
+                component: () => import(/* webpackChunkName: "toast" */ '../views/toast'),
             }
         ]
     }
